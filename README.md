@@ -129,10 +129,9 @@ Landing Page
 FAQ Dashboard
 ![FAQ Dashboard](screenshots/FAQ_page.png)
 Add / Edit /Search/Rewrite/Delete FAQ
-![FAQ Modal](screenshots/editFAQ.png)
-![FAQ Modal](screenshots/deleteFAQ.png)
 ![FAQ Modal](screenshots/addFAQ.png)
 ![FAQ Modal](screenshots/rewriteAI.png)
-![FAQ Modal](screenshots/searchFAQ.png)
-
+![FAQ Modal](screenshots/serachFAQ.png)
+![FAQ Modal](screenshots/editFAQ.png)
+![FAQ Modal](screenshots/deleteFAQ.png)
 
