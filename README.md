@@ -1,51 +1,94 @@
 											AI-Powered FAQ System
-~Project Overview
-This project is a full-stack web application developed as part of the ODIN Technologies – Developer Assessment Task.
-The objective of the application is to help businesses efficiently manage Frequently Asked Questions (FAQs) and improve the quality of answers using AI assistance.
-The system allows users to add, view, edit, delete, and search FAQs, along with an optional feature to rewrite answers using an AI model.
-The application is designed to be simple, user-friendly, and easy to understand, while still being scalable for future enhancements.
-~Features Implemented
+											AI-Powered FAQ Management System
+
+ODIN Technologies – Developer Assessment Task
+
+Project Overview
+
+The AI-Powered FAQ Management System is a full-stack web application developed as part of the ODIN Technologies Developer Assessment Task.
+
+The main objective of this project is to help organizations efficiently manage Frequently Asked Questions (FAQs) while also improving the quality of answers through optional AI assistance. The application allows users to add, view, edit, delete, and search FAQs, making content management simple and effective.
+
+An AI-based rewrite feature is included to enhance the clarity and professionalism of answers. This feature is optional and designed to assist users rather than replace manual input. The overall system is intentionally kept simple, user-friendly, and easy to extend for future improvements.
+
+Features Implemented
 Landing Page
-Displays the project title “AI-Powered Support Knowledge Base”
-Shows a short description explaining the purpose of the application
-Includes a “Go to FAQ Dashboard” button for navigation
+
+Displays the project title: “AI-Powered Support Knowledge Base”
+
+Provides a short description explaining the purpose of the application
+
+Includes a button to navigate to the FAQ Dashboard
+
 FAQ Dashboard
-Displays all FAQs in a clean and structured table format
-Shows Question, Answer, and Actions
-Includes a search bar to filter FAQs by question text
-Provides an Add FAQ button to create new entries
+
+Displays all FAQs in a structured table format
+
+Shows the Question, Answer, and available Actions
+
+Includes a search bar to filter FAQs based on question text
+
+Provides an option to add new FAQs
+
 FAQ Management (CRUD Operations)
 Add FAQ
-Opens a modal with input fields for question and answer
-Edit FAQ
-Opens a pre-filled modal allowing updates to existing FAQs
-Delete FAQ
-Requires user confirmation before deletion
-Validation
-Both question and answer fields are mandatory before saving
-AI Rewrite Feature
-Available inside the Add/Edit FAQ modal
-Sends the current answer to the backend for processing
-Uses an AI model to rewrite the answer in a clearer and more professional tone
-The rewritten content replaces the existing answer but remains editable
-This feature is optional and does not affect normal CRUD operations
-~Technology Stack Used
-Frontend
-React.js with TypeScript
-Axios for API communication
-Inline CSS for simple and readable styling
-Backend
-Node.js with Express.js
-RESTful API design using standard HTTP methods
-~Database
-SQLite database
-Prisma ORM for database schema management and queries
-AI Integration
-OpenAI API for rewriting FAQ answers
-Secure API key management using environment variables
-Project Folder Structure
-Copy code
 
+Opens a modal with input fields for question and answer
+
+Validation ensures both fields are filled before saving
+
+Edit FAQ
+
+Opens a modal pre-filled with the selected FAQ data
+
+Allows users to update existing FAQs easily
+
+Delete FAQ
+
+Requires user confirmation before deletion to prevent accidental data loss
+
+AI Rewrite Feature
+
+Available inside the Add/Edit FAQ modal
+
+Sends the current answer to the backend for processing
+
+Uses an AI model to rewrite the answer in a clearer and more professional tone
+
+The rewritten answer replaces the existing text but remains fully editable
+
+This feature is optional and does not affect standard CRUD functionality
+
+Technology Stack
+Frontend
+
+React.js with TypeScript
+
+Axios for API communication
+
+Inline CSS for simple and readable styling
+
+Backend
+
+Node.js
+
+Express.js
+
+RESTful API architecture using standard HTTP methods
+
+Database
+
+SQLite for lightweight local storage
+
+Prisma ORM for database schema management and queries
+
+AI Integration
+
+OpenAI API for rewriting FAQ answers
+
+API key handled securely using environment variables
+
+Project Folder Structure
 odin/
 │
 ├── backend/
@@ -67,59 +110,97 @@ odin/
 │
 ├── .gitignore
 └── README.md
-~Backend API Endpoints
-GET /faqs – Fetch all FAQs
-POST /faqs – Create a new FAQ
-PUT /faqs/:id – Update an existing FAQ
-DELETE /faqs/:id – Delete a FAQ
-POST /ai/rewrite – Rewrite an FAQ answer using AI
-Environment Configuration (.env)
-Create a .env file inside the backend folder with the following content:
-OPENAI_API_KEY=your_openai_api_key_here
-Note: The .env file is excluded from version control for security reasons.
-Setup Instructions
-1. Clone the Repository
-Copy code
 
+Backend API Endpoints
+
+GET /faqs
+Fetch all FAQs
+
+POST /faqs
+Create a new FAQ
+
+PUT /faqs/:id
+Update an existing FAQ
+
+DELETE /faqs/:id
+Delete a FAQ
+
+POST /ai/rewrite
+Rewrite an FAQ answer using AI
+
+Environment Configuration
+
+Create a .env file inside the backend folder with the following content:
+
+OPENAI_API_KEY=your_openai_api_key_here
+
+
+The .env file is excluded from version control to ensure security.
+
+Setup Instructions
+Step 1: Clone the Repository
 git clone <your-github-repo-url>
 cd odin
-2. Backend Setup
-Copy code
 
+Step 2: Backend Setup
 cd backend
 npm install
 node server.js
-The backend server will start on:
-Copy code
+
+
+The backend server will run on:
 
 http://localhost:5000
-3. Frontend Setup
-Copy code
 
+Step 3: Frontend Setup
 cd frontend
 npm install
 npm start
+
+
 The frontend application will run on:
-Copy code
 
 http://localhost:3000
+
 Screenshots
-All UI screenshots are available in the screenshots/ folder.
+
+All UI screenshots are available in the screenshots folder.
+
 The screenshots demonstrate:
-Landing page
-FAQ dashboard
-Add/Edit FAQ modal
-AI rewrite feature in action
+
+Landing Page
+
+FAQ Dashboard
+
+Add FAQ modal
+
+Edit FAQ modal
+
+Search functionality
+
+AI rewrite feature
+
+Delete confirmation
+
 These visuals help reviewers quickly verify the working functionality of the application.
+
 Assumptions and Notes
-Authentication was not implemented, as it was not required for this task
-The AI rewrite feature is optional and intended to assist users, not replace manual input
+
+Authentication was not implemented as it was not required for this assessment
+
 SQLite was selected for simplicity and ease of local development
-The project structure allows easy extension for future features such as user authentication or deployment
+
+The AI rewrite feature is assistive and optional
+
+The project structure supports easy extension for future features such as authentication or deployment
+
 Conclusion
-This project fulfills all functional and technical requirements specified in the ODIN Technologies assessment task.
-It demonstrates full-stack development skills, REST API design, database handling, and practical AI integration.
-The codebase is intentionally kept simple, readable, and maintainable, ensuring that all implementation decisions can be clearly explained during technical discussions.
+
+This project successfully fulfills all functional and technical requirements specified in the ODIN Technologies Developer Assessment Task.
+
+It demonstrates practical full-stack development skills, clean REST API design, database handling using an ORM, and responsible AI integration. The codebase is structured to be simple, readable, and maintainable, making it easy to understand during technical discussions and interviews.
+
+
 
 
 ## Screenshots
